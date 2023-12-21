@@ -1,0 +1,19 @@
+.btn{
+    padding:10px 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.txt{
+    font-size: 20px;
+    color: black;
+    line-height: 1.5;
+}
+
+.link{
+    text-decoration: none;
+    color: blue;
+}
