@@ -29,11 +29,12 @@ function App() {
   } , [length, number, char, setPassword])
 
   const passwordRef = useRef(null);
-
+  console.log(passwordRef);
   const copyPassword = useCallback(()=>{
     passwordRef.current?.select()
     window.navigator.clipboard.writeText(password)
   },[password])
+  
   useEffect(()=>{
     passwordGenerator()
   }, [length, number, char, passwordGenerator])
@@ -44,9 +45,9 @@ function App() {
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
           type="text" 
-          value={password}
+          defaultValue={password}
           className="outline-none w-full py-1 px-3"
-          placeholder="Password"
+          placeholder={password}
           readOnly
           ref={passwordRef}
         />
